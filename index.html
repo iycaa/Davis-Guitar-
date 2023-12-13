@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="DAVIS GUITAR icon" type="x=icon" href="https://raw.githubusercontent.com/iycaa/images/main/logo1.png">
+    <title>DAVIS GUITAR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      @media screen and (max-width: 1024px) {
+        header {
+          padding: 10px;
+          background-size: contain;
+        }
+
+        .overlay-button {
+          font-size: 14px;
+        }
+
+        .overlay {
+          display: none;
+        }
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @media screen and (max-width: 768px) {}
+
+      @media screen and (max-width: 375px) {
+        .products .container {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      nav ul li {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      main {
+        padding: 10px;
+      }
+
+      section {
+        margin-bottom: 40px;
+        padding: 20px;
+      }
+
+      footer {
+        padding: 8px;
+      }
+
+      .others {
+        width: 100%;
+      }
+
+      .others span {
+        font-size: 15px;
+      }
+
+      .others {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        height: 70vh;
+        color: White;
+      }
+
+      .others h2 {
+        font-weight: 500;
+      }
+
+      .others span {
+        display: block;
+        font-weight: 400px;
+      }
+
+      section {
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        border-radius: 8px;
+        background-color: black;
+        box-shadow: 0 0 15px black;
+      }
+
+      section h2 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        color: #F2CA52;
+        font-size: 50px;
+      }
+
+      footer {
+        color: Black;
+        text-align: right;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 1em;
+      }
+	.btntop{
+		position: right;
+        padding: 53px 50px;
+        text-decoration: none;
+        font-size: 10px;
+        margin: 10px;
+        transition: background-color 0.3s ease;
+        background-image: url('https://raw.githubusercontent.com/iycaa/images/main/uplogo.png');
+		background-size: cover;
+        background-position: center;
+		cursor: pointer;
+        background-color: transparent;
+		border: none;
+		   }
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      ul {
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Segoe UI, Tahoma, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: black;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      header {
+        background-color: black;
+        color: #D09B69;
+        text-align: center;
+        background-size: cover;
+		
+      }
+
+      nav ul {
+        list-style: none;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+      }
+
+      nav ul li a:hover {
+        color: #D09B69;;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      img {
+        position: center;
+        height: 300px;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      .div {
+        border-style: dotted;
+        border-color: #004200;
+        border-radius: 20px;
+        height: 200px;
+        width: 200px;
+        display: grid;
+        place-items: center;
+      }
+
+      .intro {
+        display: inline-block;
+        text-align: center;
+        font-size: 30px;
+		 
+       
+        
+        background-size: cover;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+		
+      }
+
+      .intro1 {
+        text-align: center;
+        width: 100%;
+		font-size: 25px;
+		color: white;
+        background-size: cover;
+        box-shadow: 0 0 15px black;
+      }
+
+      .contact {
+        width: 100%;
+        background-size: cover;
+        box-shadow: 0 0 15px black;
+      }
+
+      .menu {
+		Width: 100%;
+		font-size: 50px;
+        margin: 0px;
+        padding-top: 0;
+        position: center;
+        background-color: black;
+		box-shadow: inset 0 0 20px #D09B69;
+		border-radius: 0px;
+      }
+
+      .video-intro {
+        position: relative;
+        width: 100%;
+        box-shadow: 0 0 15px black;
+        margin: 0;
+        padding: 0;
+      }
+
+      #video-bg {
+        overflow: hidden;
+		 
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 2em;
+        z-index: 1;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+		
+      }
+
+      .overlay h2 {
+        font-size: 2.5em;
+        position: center;
+        font-weight: 1000;
+        width: 100%;
+        mix-blend-mode: overlay;
+		color: #F7DEB2;
+		
+      }
+
+      .products .container {
+        top: 8;
+        display: flex;
+        width: 100%;
+        height: max-content;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px auto;
+      }
+
+      .products .container .items {
+        margin: 10px;
+        width: 200px;
+        height: 340px;
+        background-color: #232b2b;
+        border: 4px solid #3F2D26;
+        border-radius: 12px;
+        box-shadow: 0 0 10px #D09B69;
+      }
+
+      .products .container .items .name {
+        text-align: center;
+        background-color: #F2CA52;
+        height: 80px;
+        padding-top: 4px;
+        color: black;
+        border-radius: 0px 0px 10px 10px;
+        margin: 0;
+      }
+
+      .products .container .items .info {
+        padding-left: 10px;
+        color: #111;
+      }
+
+      .products .container .items .img img {
+        width: 200px;
+        height: 250px;
+        margin: 0;
+        padding: 0;
+        border-radius: 12px 12px 0px 0px;
+        transition-duration: 0.8s;
+      }
+
+      .products .container .items .img {
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .products .container .items:hover .img img {
+        transform: scale(1.2);
+        transition-duration: 0.8s;
+        border-radius: 12px;
+      }
+
+      .button-section {
+        border-radius: 8px;
+        background-color: black;
+        width: 100%;
+        box-shadow: 0 0 15px Black;
+        margin: 0;
+      }
+
+      #button-container {
+        text-align: center;
+        margin: 30px;
+      }
+
+      .overlay-button1 {
+        display: inline-block;
+        padding: 200px 130px;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 10px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        color: white;
+        transition: background-color 0.3s ease;
+        background-image: url('https://raw.githubusercontent.com/iycaa/images/main/1.png');
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 10px #D09B69;
+      }
+
+      .overlay-button2 {
+        display: inline-block;
+        padding: 200px 130px;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 10px;
+        border: 2px solid #333;
+        border-radius: 8px;
+        color: white;
+        transition: background-color 0.3s ease;
+        background-image: url('https://raw.githubusercontent.com/iycaa/images/main/guitar.png');
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 10px #D09B69;
+      }
+
+      .overlay-button3 {
+        display: inline-block;
+        padding: 200px 130px;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 10px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        color: white;
+        transition: background-color 0.3s ease;
+        background-image: url('https://raw.githubusercontent.com/iycaa/images/main/3.png');
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 10px #D09B69;
+      }
+
+      .overlay-button4 {
+        display: inline-block;
+        padding: 200px 130px;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 10px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        color: white;
+        transition: background-color 0.3s ease;
+        background-image: url('https://raw.githubusercontent.com/iycaa/images/main/4.png');
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 10px #D09B69;
+      }
+
+      .overlay-button:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .my-buttons {
+        max-width: 100%;
+        text-align: center;
+        background-color: #232b2b;
+        color: white;
+        padding: 10px 20px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .button-containers {
+        display: flex;
+        max-width: 100%;
+        padding-top: 20px;
+        padding-right: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 30px;
+        overflow: auto;
+      }
+
+      .my-buttons:hover {
+        background-color: #f0e68c;
+      }
+
+      .products .container .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+      }
+
+      .image-description {
+        display: none;
+      }
+
+      .modal-content {
+        color: black;
+        background-color: black;
+        border-radius: 12px;
+        box-shadow: 0 0 30px #D09B69;
+      }
+
+      #modal-description {
+        font-size: 20px;
+        color: #D09B69;
+        background-color: black;
+      }
+
+      .modal-content img {
+        overflow: auto;
+        border-radius: 50px;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 0 30px black;
+        transition-duration: 0.8s;
+      }
+
+      .modal-content:hover img {
+        transform: scale(1.1);
+      }
+
+      .menu {
+        position: relative;
+      }
+
+      
+	.footer {
+	position: rigth;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    transition: all 0.3s ease;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var modal = document.getElementById('img-modal');
+        var modalImage = document.getElementById('modal-image');
+        var modalDescription = document.getElementById('modal-description');
+        // Select all elements with the 'gallery-item' class
+        var galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(function(galleryItem) {
+          galleryItem.addEventListener('click', function() {
+            var imgSrc = this.querySelector('img').src;
+            var imgDescription = this.getAttribute('data-description');
+            modalImage.src = imgSrc;
+            modalDescription.innerText = imgDescription;
+            $('#img-modal').modal('show');
+          });
+        });
+      });
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+      
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          document.getElementById(targetId).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    
+    </script>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div width="100%">
+        <img src="https://raw.githubusercontent.com/iycaa/images/main/header.png" alt="davisguitar" />
+      </div>
+       <section class="menu">
+        <nav>
+          <div class="intro">
+            <ul>
+              <li>
+                <a href="#video-bg">Home</a>
+              </li>
+              <li>
+                <a href="#Electric">Electric</a>
+              </li>
+              <li>
+                <a href="#Acoustic">Acoustic</a>
+              </li>
+              <li>
+                <a href="#Bass">Bass</a>
+              </li>
+              <li>
+                <a href="#Amplifiers">Amplifiers</a>
+              </li>
+              <li>
+                <a href="#Pedal">Pedal</a>
+              </li>
+              <li>
+                <a href="#Accessories">Accessories</a>
+              </li>
+              <li>
+                <a href="#Parts">Parts</a>
+              </li>
+            </ul>
+        </nav>
+      </section>
+      <section class="video-intro">
+        <div id="video-bg">
+          <video width="100%" autoplay muted loop>
+            <source src="https://raw.githubusercontent.com/iycaa/images/main/finalbG.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="overlay">
+          <h2> WELCOME TO DAVIS GUITAR </h2>
+        </div>
+      </section>
+      <section class="button-section">
+        <div class="button-container">
+          <a href="#Electric" class="overlay-button1"></a>
+          <a href="#Amplifiers" class="overlay-button2"></a>
+          <a href="#Pedal" class="overlay-button3"></a>
+          <a href="#Parts" class="overlay-button4"></a>
+        </div>
+      </section>
+      <main>
+        <section class="intro1" style="margin-bottom: 200px;margin-top: 100px;">
+          <h2>DAVIS GUITAR</h2>
+          <p> Davis Guitar is a well-known company based in Singapore that specializes in musical instruments, particularly guitars. They offer a wide range of products, from acoustic and electric guitars to bass guitars, ukuleles, and various accessories. They carry a variety of brands, including their own Davis brand, as well as other popular names like Fender, Gibson, Ibanez, and more. <br>
+            <br> Davis Guitar is also known for its excellent customer service and knowledgeable staff who are always ready to help customers find the perfect instrument. They've been in the business for over three decades, which speaks volumes about their commitment to quality and customer satisfaction.
+          </p>
+        </section>
+        <section id="Electric">
+          <h2>ELECTRIC GUITAR</h2>
+          <div id="products" class="products">
+            <div class="container">
+              <div class="items">
+                <div class="img img1 gallery-item" data-id="1" data-description="Body: Basswood
+Neck: Maple, Bolt-on
+Fingerboard: Rosewood
+Number of Frets: 22
+Scale Length: 648mm (25-1/2″)
+Pickups: OS-1 Single Coil x3
+Controls: Volume x 1, Tone x 2, PU Selector, Switch x 1
+Tailpiece: VFT-1 Tremolo
+Hardware: Chrome ">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e1.png" alt="Image 1" class="img-thumbnail" data-id="1">
+                </div>
+                <div class="name">Aria Left Handed Electric Guitar – STG-003L 3TS</div>
+              </div>
+              <div class="items">
+                <div class="img img2 gallery-item" data-id="2" data-description="Body: Basswood
+Neck: Maple, Bolt-on
+Fingerboard: Rosewood
+Number of Frets: 22
+Scale Length: 648mm (25-1/2″)
+Pickups: OS-1 Single Coil x3
+Controls: Volume x 1, Tone x 2, PU Selector, Switch x 1
+Tailpiece: VFT-1 Tremolo
+Hardware: Chrome">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e2.png" alt="Image 2" class="img-thumbnail" data-id="2">
+                </div>
+                <div class="name">Aria Left Handed Electric Guitar – STG-003L BK</div>
+              </div>
+              <div class="items">
+                <div class="img img3 gallery-item" data-id="3" data-description="Body: Basswood
+Neck: Maple, Bolt-on
+Fingerboard: Rosewood
+Number of Frets: 22
+Scale Length: 580mm (22-7/8”)
+Pickups: OS-3 Single Coil x 3
+Controls: Volume x 1, Tone x 1, PU Selector Switch x 1
+Tailpiece: VFT-1 Tremolo
+Hardware: Chrome">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e3.png" alt="Image 3" class="img-thumbnail" data-id="3">
+                </div>
+                <div class="name">Aria Mini Electric Guitar – STG-Mini BLK</div>
+              </div>
+              <div class="items">
+                <div class="img img4 gallery-item" data-id="4" data-description="Body: Basswood
+Neck: Maple, Bolt-on
+Fingerboard: Rosewood
+Number of Frets: 22
+Scale Length: 580mm (22-7/8”)
+Pickups: OS-3 Single Coil x 3
+Controls: Volume x 1, Tone x 1, PU Selector Switch x 1
+Tailpiece: VFT-1 Tremolo
+Hardware: Chrome">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e4.png" alt="Image 4" class="img-thumbnail" data-id="4">
+                </div>
+                <div class="name">Aria Mini Electric Guitar – STG-Mini KWPK</div>
+              </div>
+              <div class="items">
+                <div class="img img5 gallery-item" data-id="5" data-description="Body: Maple, Arched Top
+Neck: Maple, Set-Neck
+Fingerboard: Rosewood
+Scale Length: 628mm (24-3/4″)
+Number of Frets: 22
+Pickups: Aria Classic Power II x 2
+Controls: Volume x2, Tone x2, PU selector switch x1
+Tailpiece: Aria original QH tailpiece
+Bridge: Aria original SPT bridge
+Hardware: Chrome">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e5.png" alt="Image 5" class="img-thumbnail" data-id="5">
+                </div>
+                <div class="name">Aria TA-Classic – WR</div>
+              </div>
+              <div class="items">
+                <div class="img img6 gallery-item" data-id="6" data-description="Roasted Maple is a material that comes as a result of treating Maple wood with a high heat process, volatilizing the water and oils in the wood, giving as a result a more sturdy and durable wood that not only increases stability but also the overall sound quality of the material. The sound that we get from Roasted Maple is a rich, organic sound with a vintage-like tone that is reminiscent of an instrument that has aged its sound with time and usage. This is a new product lineup of Bacchus that puts this amazing feature, which is often used in high-end models, at a reasonable price range.
+
+Body:  Hardwood
+Neck:  Roasted Maple
+Fingerboard:  Roasted Maple
+Bridge:  Synchronized Trem
+Machineheads:  Rotomatic Type
+Fret:  Nickel Silver
+Pickup:  Original S-S-H set
+Control:  1Vol,2Tone(w/Coil Tap), 5way PU Selector
+Scale:  648mm
+Width at Nut:  42.0mm
+Finish:  Urethane
+Comes with Gig Bag">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e6.png" alt="Image 6" class="img-thumbnail" data-id="6">
+                </div>
+                <div class="name">Bacchus BST-2-RSM/M Electric – BGM</div>
+              </div>
+              <div class="items">
+                <div class="img img7 gallery-item" data-id="7" data-description="Roasted Maple is a material that comes as a result of treating Maple wood with a high heat process, volatilizing the water and oils in the wood, giving as a result a more sturdy and durable wood that not only increases stability but also the overall sound quality of the material. The sound that we get from Roasted Maple is a rich, organic sound with a vintage-like tone that is reminiscent of an instrument that has aged its sound with time and usage. This is a new product lineup of Bacchus that puts this amazing feature, which is often used in high-end models, at a reasonable price range.
+
+Body:  Hardwood
+Neck:  Roasted Maple
+Fingerboard:  Rosewood
+Bridge:  Synchronized Trem
+Machineheads:  Rotomatic Type
+Fret:  Nickel Silver
+Pickup:  Original S-S-H set
+Control:  1Vol,2Tone(w/Coil Tap), 5way PU Selector
+Scale:  648mm
+Width at Nut:  42.0mm
+Finish:  Urethane
+Comes with Gig Bag">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e7.png" alt="Image 7" class="img-thumbnail" data-id="7">
+                </div>
+                <div class="name">Bacchus BST-2-RSM/R Electric – SLPK</div>
+              </div>
+              <div class="items">
+                <div class="img img8 gallery-item" data-id="8" data-description="Roasted Maple is a material that comes as a result of treating Maple wood with a high heat process, volatilizing the water and oils in the wood, giving as a result a more sturdy and durable wood that not only increases stability but also the overall sound quality of the material. The sound that we get from Roasted Maple is a rich, organic sound with a vintage-like tone that is reminiscent of an instrument that has aged its sound with time and usage. This is a new product lineup of Bacchus that puts this amazing feature, which is often used in high-end models, at a reasonable price range.
+
+Body:  HardwoodBacchus BST-3RSM/M Electric – OWH
+Neck:  Roasted Maple
+Fingerboard:  Rosewood
+Bridge:  Synchronized Trem
+Machineheads:  Rotomatic Type
+Fret:  Nickel Silver
+Pickup:  Original S-S-H set
+Control:  1Vol,2Tone(w/Coil Tap), 5way PU Selector
+Scale:  648mm
+Width at Nut:  42.0mm
+Finish:  Urethane
+Comes with Gig Bag">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e8.png" alt="Image 8" class="img-thumbnail" data-id="8">
+                </div>
+                <div class="name">Bacchus BST-2-RSM/R Electric – BGM</div>
+              </div>
+              <div class="items">
+                <div class="img img9 gallery-item" data-id="9" data-description="An entry-class lineup that delivers reliable quality at the best price, with every single model quality controlled by skilled craftsmen.
+
+Body: Hardwood
+Neck: Roasted Maple
+Fretboard: Roasted Maple
+Bridge: Synchronized Trem
+Machineheads: Rotomatic Type
+Fret: Nickel Silver
+Pickup: Original H-H set
+Control: 1Vol,1Tone, 3way PU Selector
+Scale: 25 1/2inch
+Width at Nut: 42.0mm
+Fingerboard Radius: 400R
+Finish: Urethane">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e9.png" alt="Image 9" class="img-thumbnail" data-id="9">
+                </div>
+                <div class="name">Bacchus BST-3RSM/M Electric – OWH</div>
+              </div>
+              <div class="items">
+                <div class="img img10 gallery-item" data-id="10" data-description="An entry-class lineup that delivers reliable quality at the best price, with every single model quality controlled by skilled craftsmen.  Roasted maple, which has undergone a high-temperature heat treatment, not only gets improved resistance to the warping of the neck, but also has an advantage in sound quality.  Two Bacchus original humbucker pickups are used. The bridge humbucker is positioned closer to the bridge for a more aggressive and powerful tone. Even when distorted with distortion, there is a moderate sense of separation, making it ideal for heavy and modern genres.
+
+Body: Hardwood
+Neck: Roasted Maple
+Fretboard: Roasted Maple
+Bridge: Synchronized Trem
+Machineheads: Rotomatic Type
+Fret: Nickel Silver
+Pickup: Original H-H set
+Control: 1Vol,1Tone, 3way PU Selector
+Scale: 25 1/2inch
+Width at Nut: 42.0mm
+Fingerboard Radius: 400R
+Finish: Urethane">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e10.png" alt="Image 10" class="img-thumbnail" data-id="10">
+                </div>
+                <div class="name gallery-item">Bacchus BST-3RSM/M Electric – SLPK</div>
+              </div>
+              <div class="items">
+                <div class="img img11 gallery-item" data-id="11" data-description="Roasted maple, which has undergone a high-temperature heat treatment, not only gets improved resistance to the warping of the neck, but also has an advantage in sound quality.
+
+Body:  Hardwood
+Neck:  Roasted Maple
+Fingerboard:  Roasted Maple
+Nut:  ABS
+Bridge:  TE Type Bridge
+Machineheads:  Rotomatic Type
+Fret:  Nickel Silver
+Pickups:  Original S-S Set
+Controls:  1Vol, 1Tone, 3-way PU Selector
+Scale:  25.5inch
+Width at Nut:  42.0mm
+Fingerboard Radius:  400R
+Finish:  Urethane">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e11.png" alt="Image 11" class="img-thumbnail" data-id="11">
+                </div>
+                <div class="name">Bacchus BTE-1RSM/M Electric – CAR</div>
+              </div>
+              <div class="items">
+                <div class="img img12 gallery-item" data-id="12" data-description="The “DUKE” has been a longtime best-seller since the Bacchus Handmade Series was first produced. Now, we are proud to introduce a new model from the Global series to bring the refined sound and playability of the DUKE to an even wider range of players.
+
+A finish that accentuates the appeal of wood An -Antique Finish- that values the natural texture of the wood used as the material.
+Because this is a guitar that you want to touch every day, we have created a color scheme that is soothing and never gets old, just like an exquisite piece of furniture.
+
+Arch shape inherited from the Handmade Series
+This model follows the arch shape of the original Japan-made Handmade Series DUKE model produced at the Aska factory. The curves of the arches add definition to the top of the body, which is the face of the guitar, and the reflections of the polished paint give it a beautiful, tight look.The set neck model’s playability and sound are affected by the angle of the neck. While reproducing the arch shape and neck angle of the Handmade Series DUKE model made in Japan, we fine-tuned it to match the material and design of the instrument. This has resulted in the best balance between the nice attack produced by the moderate tension and the rich body tone.
+
+Deep joints for efficient vibration transmissionA deep-joint system is used, which has a large bonding area with the body and transmits vibration firmly. The wide ground contact width also has the advantage of making it easier to achieve accuracy in preparation angles and woodworking.
+
+The thickness of the body has been adjusted and brought down to a range that doesn’t compromise the balance of the DUKE’s unique appearance while retaining all of the goodness in the sound profile. With this reduction in the body’s width, we succeeded in reducing the overall weight of the body, making it easier for even relatively small players to carry and maneuver.
+
+Slim NeckThis model features our Slim U-shaped neck grip. Even players with relatively small hands can easily press down on the strings and concentrate on playing while your left hand can always easily change positions.
+
+Original Pickups
+Equipped with an original humbucker using a ferrite magnet with stable quality. It has a fatness and sweetness suitable for single-note riffs and solos, but also has a brightness that is easy to use for clean tones, making it useful in a variety of genres.
+
+Setup by our own specialized inspection team in JapanAll instruments are inspected and set up by a specialized inspection team at the Deviser headquarters in Matsumoto City, Nagano Prefecture, before being shipped. By identifying individual differences in the material wood, we adjust and finish each instrument evenly to provide players with a solid playing experience that feels great and is ready to go right out of the box.
+
+Body Top:  Maple
+Body:  Nyatoh
+Neck:  Nyatoh
+Fingerboard:  Rosewood
+Nut:  Graphtech® TUSQ XL
+Bridge:  T.O.M type
+Machineheads:  Rotomatic Type
+Fret:  Nickel Silver
+Pickups:  Original H-H set
+Controls:  2 Vol, 2 Tone, 3 way PU selector
+Scale:  24 3/4 inch (628mm)
+Width at Nut:  43mm
+Fingerboard Radius:  305R
+Finish:  Urethane
+Strings:  D’addario® 010 – 046">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e12.png" alt="Image 12" class="img-thumbnail" data-id="12">
+                </div>
+                <div class="name">Bacchus DUKE-STD – A-BR</div>
+              </div>
+              <div class="items">
+                <div class="img img13 gallery-item" data-id="13" data-description="Description
+The “DUKE” has been a longtime best-seller since the Bacchus Handmade Series was first produced. Now, we are proud to introduce a new model from the Global series to bring the refined sound and playability of the DUKE to an even wider range of players.
+
+A finish that accentuates the appeal of wood
+An -Antique Finish- that values the natural texture of the wood used as the material.
+Because this is a guitar that you want to touch every day, we have created a color scheme that is soothing and never gets old, just like an exquisite piece of furniture.
+
+Arch shape inherited from the Handmade Series
+This model follows the arch shape of the original Japan-made Handmade Series DUKE model produced at the Aska factory. The curves of the arches add definition to the top of the body, which is the face of the guitar, and the reflections of the polished paint give it a beautiful, tight look.The set neck model’s playability and sound are affected by the angle of the neck. While reproducing the arch shape and neck angle of the Handmade Series DUKE model made in Japan, we fine-tuned it to match the material and design of the instrument. This has resulted in the best balance between the nice attack produced by the moderate tension and the rich body tone.
+
+Deep joints for efficient vibration transmissionA deep-joint system is used, which has a large bonding area with the body and transmits vibration firmly. The wide ground contact width also has the advantage of making it easier to achieve accuracy in preparation angles and woodworking.
+
+The thickness of the body has been adjusted and brought down to a range that doesn’t compromise the balance of the DUKE’s unique appearance while retaining all of the goodness in the sound profile. With this reduction in the body’s width, we succeeded in reducing the overall weight of the body, making it easier for even relatively small players to carry and maneuver.
+
+Slim Neck
+This model features our Slim U-shaped neck grip. Even players with relatively small hands can easily press down on the strings and concentrate on playing while your left hand can always easily change positions.
+
+Original PickupsEquipped with an original humbucker using a ferrite magnet with stable quality. It has a fatness and sweetness suitable for single-note riffs and solos, but also has a brightness that is easy to use for clean tones, making it useful in a variety of genres.
+
+Setup by our own specialized inspection team in Japan
+All instruments are inspected and set up by a specialized inspection team at the Deviser headquarters in Matsumoto City, Nagano Prefecture, before being shipped. By identifying individual differences in the material wood, we adjust and finish each instrument evenly to provide players with a solid playing experience that feels great and is ready to go right out of the box.
+
+Body Top:  Maple
+Body:  Nyatoh
+Neck:  Nyatoh
+Fingerboard:  Rosewood
+Nut:  Graphtech® TUSQ XL
+Bridge:  T.O.M type
+Machineheads:  Rotomatic Type
+Fret:  Nickel Silver
+Pickups:  Original H-H set
+Controls:  2 Vol, 2 Tone, 3 way PU selector
+Scale:  24 3/4 inch (628mm)
+Width at Nut:  43mm
+Fingerboard Radius:  305R
+Finish:  Urethane
+Strings:  D’addario® 010 – 046">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e13.png" alt="Image 13" class="img-thumbnail" data-id="13">
+                </div>
+                <div class="name">Bacchus DUKE-STD – A-CHG</div>
+              </div>
+              <div class="items">
+                <div class="img img14 gallery-item" data-id="14" data-description="The “DUKE” has been a longtime best-seller since the Bacchus Handmade Series was first produced. Now, we are proud to introduce a new model from the Global series to bring the refined sound and playability of the DUKE to an even wider range of players.
+
+A finish that accentuates the appeal of woodAn -Antique Finish- that values the natural texture of the wood used as the material.
+Because this is a guitar that you want to touch every day, we have created a color scheme that is soothing and never gets old, just like an exquisite piece of furniture.
+
+Arch shape inherited from the Handmade Series
+This model follows the arch shape of the original Japan-made Handmade Series DUKE model produced at the Aska factory. The curves of the arches add definition to the top of the body, which is the face of the guitar, and the reflections of the polished paint give it a beautiful, tight look.The set neck model’s playability and sound are affected by the angle of the neck. While reproducing the arch shape and neck angle of the Handmade Series DUKE model made in Japan, we fine-tuned it to match the material and design of the instrument. This has resulted in the best balance between the nice attack produced by the moderate tension and the rich body tone.
+
+Deep joints for efficient vibration transmissionA deep-joint system is used, which has a large bonding area with the body and transmits vibration firmly. The wide ground contact width also has the advantage of making it easier to achieve accuracy in preparation angles and woodworking.
+
+The thickness of the body has been adjusted and brought down to a range that doesn’t compromise the balance of the DUKE’s unique appearance while retaining all of the goodness in the sound profile. With this reduction in the body’s width, we succeeded in reducing the overall weight of the body, making it easier for even relatively small players to carry and maneuver.
+
+Slim NeckThis model features our Slim U-shaped neck grip. Even players with relatively small hands can easily press down on the strings and concentrate on playing while your left hand can always easily change positions.
+
+Original Pickups
+Equipped with an original humbucker using a ferrite magnet with stable quality. It has a fatness and sweetness suitable for single-note riffs and solos, but also has a brightness that is easy to use for clean tones, making it useful in a variety of genres.
+
+Setup by our own specialized inspection team in JapanAll instruments are inspected and set up by a specialized inspection team at the Deviser headquarters in Matsumoto City, Nagano Prefecture, before being shipped. By identifying individual differences in the material wood, we adjust and finish each instrument evenly to provide players with a solid playing experience that feels great and is ready to go right out of the box.
+
+Body Top:  Maple
+Body:  Nyatoh
+Neck:  Nyatoh
+Fingerboard:  Rosewood
+Nut:  Graphtech® TUSQ XL
+Bridge:  T.O.M type
+Machineheads:  Rotomatic Type
+Fret:  Nickel Silver
+Pickups:  Original H-H set
+Controls:  2 Vol, 2 Tone, 3 way PU selector
+Scale:  24 3/4 inch (628mm)
+Width at Nut:  43mm
+Fingerboard Radius:  305R
+Finish:  Urethane
+Strings:  D’addario® 010 – 046">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/E-guitar/e14.png" alt="Image 14" class="img-thumbnail" data-id="14">
+                </div>
+                <div class="name">Bacchus DUKE-STD – A-RED</div>
+        </section>
+        <div class="modal" id="img-modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img src="" alt="Modal Image" id="modal-image" class="img-fluid">
+                <p id="modal-description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section id="Acoustic">
+          <h2>ACOUSTIC GUITAR</h2>
+          <div id="products" class="products">
+            <div class="container">
+              <div class="items">
+                <div class="img img1  gallery-item" data-id="1" data-description="Top:  Spruce
+Back & Sides:  Walnut
+Neck:  Mahogany
+Fingerboard:  Walnut
+Frets:  19F
+Bridge:  Walnut
+Nut width:  43mm
+Scale:  432mm
+Finish:  TS (Tobacco Sunburst)">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acoustic/a1.png" alt="Image 1" class="img-thumbnail" data-id="a1">
+                </div>
+                <div class="name">Aria AGU160-CS Guitarlele</div>
+              </div>
+              <div class="items">
+                <div class="img img2 gallery-item" data-id="2" data-description="Concert Size
+Electric Pickup system with built-in tuner
+18 frets
+Solid Spruce Top
+Rosewood Back/Sides
+Sealed Geared Tuners
+Aquila Strings">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acoustic/a2.png" alt="Image 2" class="img-thumbnail" data-id="a2">
+                </div>
+                <div class="name">Boulder Creek EUC-2N Riptide Concert Ukulele</div>
+              </div>
+              <div class="items">
+                <div class="img img3 gallery-item" data-id="3" data-description="Size: 40inch
+Headstock: Laser engraving logo
+Neck: Mahogany
+Top: A Engleman Spruce
+Sound hole: Laser engraving pattern
+Back and side: A Sapele
+Fingerboard: A Rosewood
+Bridge: Rosewood
+Machine heads: Amari black steel Die-cast
+Nut and saddle: Korea plastic-steel
+Binding: Arc largest coffee white and black ABS
+String: Enya original Korean hexagon phosphor copper string
+Finish: Matte">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acoustic/a3.png" alt="Image 3" class="img-thumbnail" data-id="a3">
+                </div>
+                <div class="name">Enya Amari AM-408CEQ Electro Acoustic</div>
+              </div>
+              <div class="items">
+                <div class="img img4 gallery-item" data-id="3" data-description="Size:  41”
+Headstock:  Laser engraving logo
+Neck: Mahogany
+Top: Engelmann Spruce(A)
+Sound hole: Laser
+Back & side: Sapele
+Fingerboard:  Rosewood(A)
+Bridge: Rosewood
+Includes Gig Bag">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acoustic/a4.png" alt="Image 4" class="img-thumbnail" data-id="a4">
+                </div>
+                <div class="name">Enya Amari AM-418C Acoustic</div>
+              </div>
+              <div class="items">
+                <div class="img img5 gallery-item" data-id="5" data-description="Size:41”
+Headstock:  Laser engraving logo
+Neck: Mahogany
+Top:  Engelmann Spruce(A)
+Sound hole: Laser
+Back & side: Sapele
+Fingerboard:  Rosewood(A)
+Bridge: Rosewood">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acoustic/a5.png" alt="Image 5" class="img-thumbnail" data-id="a5">
+                </div>
+                <div class="name">Enya Amari AM-418CEQ Electro Acoustic</div>
+              </div>
+              <div class="items">
+                <div class="img img6 gallery-item" data-id="6" data-description="Travel Size 36″
+Mahogany Top
+Mahogany Body
+Mahogany Neck
+Nubone Nut and Saddle
+Satin Finish
+Enya Bag Included">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acoustic/a6.png" alt="Image 6" class="img-thumbnail" data-id="a6">
+                </div>
+                <div class="name">Enya Amari AM-Baby Travel Acoustic</div>
+              </div>
+              <div class="items">
+                <div class="img img7 gallery-item" data-id="7" data-description="Amari by Enya AM-BABY is a rich small-bodied acoustic guitar that offers a warm tone and great feel at an astonishingly affordable price.  This Acoustic guitar features a mahogany top, as well mahogany back and sides that delivers great tone and versatility.  And it’s smaller body size is ideal for travels and great convenience everywhere.
+
+**Comes with Soft Gig Bag
+
+Size:  36″
+Top:  Mahogany
+Body:  Mahogany
+Neck:  Mahogany
+Nut & Saddle:  Nubone
+Finish:  Satin
+Electronics:  Enya 4-Band Preamp w/built in Tuner">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acoustic/a7.png" alt="Image 7" class="img-thumbnail" data-id="a7">
+                </div>
+                <div class="name">Enya Amari AM-BabyEQ Electro Acoustic</div>
+              </div>
+              <div class="items">
+                <div class="img img8 gallery-item" data-id="8" data-description="Neck : MAHOGANY
+Top : ENGELMANN SPRUCE
+Back & Sides : SAPELE
+Fretboard : INDIAN ROSEWOOD">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acoustic/a8.png" alt="Image 8" class="img-thumbnail" data-id="a8">
+                </div>
+                <div class="name">Enya Amari AM-Mini Acoustic</div>
+              </div>
+              <div class="items">
+                <div class="img img9 gallery-item" data-id="9" data-description="Back and side: Sapele
+Top: Spruce
+Binding: White vinyl with black lines
+Tuning pegs: Diecast tuning pegs
+Nut and saddle: Plastic
+Bag Included">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acoustic/a9.png" alt="Image 9" class="img-thumbnail" data-id="a9">
+                </div>
+                <div class="name">Enya Amari AM-MiniEQ Electro Acoustic</div>
+        </section>
+        <section id="Bass">
+          <h2>BASS GUITAR</h2>
+          <div id="products" class="products">
+            <div class="container">
+              <div class="items">
+                <div class="img img1 gallery-item" data-id="1" data-description="Part of the LTD Deluxe Series that’s designed for professional musical applications on stage and in the studio, the newly updated B-1004 and B-1005 basses are perfect for almost any performance style and genre. Constructed at 34” scale, these basses offers a swamp ash body topped by solid bocote, a beautiful figured sustainable tonewood, along with a five-piece wenge/purple heart neck with pau ferro fingerboard. The B-1004 and B-1005 offer premium components including high-quality tuners and bridge from Gotoh, but it is highlighted by the inclusion of Nordstrand Big Splits hum-cancelling pickups, along with an ABQ-3MS 3-band EQ. This setup gives you incredible flexibility in tone, with an active/passive mini-switch, a mid-frequency selection mini-switch (800Hz or 400Hz), individual bass, treble, and mid EQ controls, and master volume and balance controls. Available in Natural Satin finish.CONSTRUCTION:  Bolt-On
+SCALE:  34″
+BODY:  Swamp Ash
+TOP:  Solid Bocote
+NECK:  5pc Wenge/Purple Heart
+FINGERBOARD:  Pau Ferro
+FINGERBOARD RADIUS:  400mm
+FINISH:  Natural Satin
+NUT WIDTH:  42mm
+NUT TYPE:  Molded
+NECK CONTOUR:  Extra Thin U
+FRETS/TYPE:  24 XJ Stainless Steel
+HARDWARE COLOR:  Black
+STRAP BUTTON:  Standard
+TUNERS:  Gotoh
+BRIDGE:  Gotoh
+NECK PU:  Nordstrand Big Splits
+BRIDGE PU:  Nordstrand Big Splits
+ELECTRONICS:  Active
+ELECTRONICS LAYOUT:  Volume/Balance/ABQ-3MS 3-Band EQ/2 Mini Switches
+STRINGS:  D’Addario XL165 (.045/.065/.085/.105)">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/bass/b1.png" alt="Image 1" class="img-thumbnail" data-id="b1">
+                </div>
+                <div class="name">LTD B-1004 – Natural Satin</div>
+              </div>
+              <div class="items">
+                <div class="img img2 gallery-item" data-id="2" data-description="Scale:  34″
+Body:  Ash
+Top:  Spalted Maple
+Neck:  5Pc Maple/Rosewood
+Fingerboard:  Rosewood
+Fingerboard Radius:  350mm
+Finish:  See Thru Black Satin
+Nut Width:  40mm
+Nut Type:  Molded
+Neck Contour:  Extra Thin U
+Frets/Type:  24 XJ
+Hardware Colour:  Black
+Nickel:  Strap Button
+Standard Tuners:  LTD
+Bridge:  LTD BB-604 w/ String Thru
+Neck PU: ESP Designed SB-4N
+Bridge PU: ESP Designed SB-4B
+Electronics:  Passive P.U. w/ Active EQ
+Electronics Layout: Vol/Bal/ABQ-3 3-Band EQ">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/bass/b2.png" alt="Image 2" class="img-thumbnail" data-id="b2">
+                </div>
+                <div class="name">LTD B204 Spalted Maple – Trans Black Satin</div>
+              </div>
+              <div class="items">
+                <div class="img img3 gallery-item" data-id="3" data-description="Country of Origin:  Indonesia
+Guitar Color Shown:  Gloss Black (BLK)
+Tuners:  Schecter
+Fretboard:  Rosewood
+Neck Material:  Maple
+Inlays:  Offset/Reverse Dots
+Scale:  34” (863mm)
+Neck Shape:  Thin ‘C’
+Thickness:  @ 1st Fret- .787” (20mm)/ @ 12th Fret- .866” (22mm)
+Frets:  21 Narrow X-Jumbo
+Fretboard Radius:  16” (406mm)
+Nut:  Graph Tech XL Ivory Tusq
+Nut Width:  1.496” (38mm)
+Truss Rod:  2-Way Adjustable Rod w/ Heel Access Spoke Wheel
+Body Material:  Alder
+Controls:  Volume/Volume/Tone (Push-Pull Coil-Tap)
+Bridge Pickup:  Schecter USA MonsterTone-J™
+Neck Pickup:  Schecter USA MonsterTone-J™">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/bass/b3.png" alt="Image 3" class="img-thumbnail" data-id="b3">
+                </div>
+                <div class="name">Schecter J-4 4-Strings Bass – Black</div>
+        </section>
+        <section id="Amplifiers">
+          <h2>Amplifiers</h2>
+          <div id="products" class="products">
+            <div class="container">
+              <div class="items">
+                <div class="img img1 gallery-item" data-id="1" data-description="MINI AMP. MASSIVE SOUND.
+Ideal for aggressive playing styles, the Ecstasy Mini amp boasts the outrageous heavy tones that get Bogner amps into the backlines of rock’s most notable players. The Mini’s compact size, weight and onboard effects loop makes Ecstasy Mini perfect for the stage, home and studio.
+
+The Ecstasy is loaded with player-friendly features including Gain, Volume, three band EQ, Presence control and 4 tone shaping mini-toggle switches to control Variac (headroom and response), Gain (crunch or Overdrive), Mid freq (select one of 3 frequencies to be controlled by the mids control) and Pre EQ (offering mellower or more aggressive settings for the amps high end). On the back panel you’ll find a high-quality effects loop ideal for using time-based effects with your high-gain tones. The included 24V universal-voltage power-supply means you can take your Ecstasy wherever you travel.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/ampli/1.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name">Bogner Ecstasy Mini Head</div>
+              </div>
+              <div class="items">
+                <div class="img img2 gallery-item" data-id="2" data-description="The FM3 Mk II Turbo is an all-in-one amp modeler, affects processor and foot controller. It features our latest CYGNUS X2 amp modeling, developed for the award-winning Axe-Fx III. The FM3 recreates the sound and the feel of real tube amps, with 300+ models offering an impressive range of clean, “edge of breakup”, and everything from warm, touch-sensitive overdrive to face-melting modern distortion.
+
+The FM3 also includes the entire speaker cab impulse response (“IR”) collection from the Axe-Fx III, with a stunning 2,200+ “Factory” choices and 1,024 “User” locations to store custom sounds from free or commercial producers. Firmware 7, now in public beta, brings new DynaCab™ capabilities — and more — to the FM3 Mk II Turbo!
+
+In comparison to the original FM3, the new MKII TURBO offers 10+% more DSP, allowing for more complex presets that would exceed the limits of the older version. It also adds new larger footswitch mini-displays. All other features and specs are the same as those on the standard FM3.
+
+As a multi-effects unit, FM3 truly excels. It includes a superb selection of Fractal Audio’s state-of-the-art effect algorithms. All of the essentials and many exciting innovations are on board: dazzling drive pedals, dozens of delays, reverbs, compressors, EQs, phasers, flangers and other modulation effects, a looper, and much more.
+
+The FM3 also features 4×4 USB Audio capability for both Mac and PC. This lets the FM3 double as the hub of a portable recording studio for playback, recording, re-amping, and more.
+
+The FM3 is an extremely flexible and versatile foot controller with switch and layout capabilities based on our FC Controllers. Each footswitch has its own mini LCD display to show the function of the switch, plus a variable color LED ring which shows the category and status of the switch. Those who wish for more footswitches can use FASLINK™ to connect one or two FC-6 or FC-12 controllers. These integrate seamlessly with onboard switches and also offer additional switch/pedal jacks.
+
+Whether you want the pure simplicity of a great guitar straight in to a classic amp, or to venture into totally unexplored sonic territory, the FM3 delivers the legendary Fractal Audio experience — and fits easily into a backpack.
+
+10+% more DSP power than the standard FM3.
+Durable steel chassis with protective endcaps designed to withstand the rigors of touring.
+Ultra-high-quality signal path for extremely low THD and noise floor.
+Cygnus X2 Amp Modeling based on the Award-Winning Axe-Fx III
+Extensive collection of on-board speaker cab simulations, plus 1,024 memory locations for “User Cabs”
+DynaCab™ capability for visual mic-on-speaker tone sculpting (Requires firmware 7.0 or newer)
+Extremely powerful and flexible multi-FX processor capability based on Axe-Fx III
+Eight nameable “Scenes” per preset eliminate “tap dancing” and allow for quick sound changes
+Easy-to-read, precision full-screen tuner
+4×4 USB audio capabilities allow for recording, playback, re-amping and more.
+Extremely user-friendly interface with dedicated hardware controls plus five “soft-knobs” with on-screen labels for both turn and push functions.
+Three onboard “SSS” foot switches are quiet and reliable, with no mechanical contacts to fail.
+FM3 uses the “FC” system of switches and layouts for extreme flexibility and versatility including 8+1 layouts, per-preset switches, and more.
+Two pedal jacks each allow connecting 1-2 external switches or 1 expression pedal like the Fractal Audio EV-1 or EV-2.
+Input 1 is ultra-low noise, with a 1/4” mono Instrument input featuring “Secret Sauce IV” for optimized signal from your guitar or bass.
+Output 1 is Stereo, with Balanced XLR jacks, plus a stereo headphone out.
+Stereo Input 2 and Stereo Output 2 can be used together as an FX loop, or individually as aux in/out for a range of flexible setups including 4CM, FRFR+Guitar Speaker backline, and more.
+FM3-Edit is a free software editor which brings extensive editing capabilities to your Mac or PC.
+Upgradeable firmware allows for constant improvement and innovation in the tradition of Fractal Audio Systems.
+And much more. See our main web site for additional details, downloads, product manuals, and more.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/ampli/2.png" alt="Image 2" class="img-thumbnail" data-id="amp2">
+                </div>
+                <div class="name"> FM3 Mk II TURBO – Amp Modeler/Multi-FX/Floor Unit</div>
+              </div>
+              <div class="items">
+                <div class="img img3 gallery-item" data-id="3" data-description="PURE ACOUSTIC PERFORMANCE
+Designed and engineered in the UK, the A-DUO provides versatility, portability, and reliability to all levels of acoustic players. An ultra-efficient, dual mono Class D power amplifier plus a pair of 8” custom-designed dual-cone woofers, delivers articulate transparent acoustic sound with both punch and high-end clarity, just like your acoustic instrument. The A-DUO has been designed to adapt to multiple performance situations. Placed on the floor, it has a minimal stage footprint and can even be used as a performance seat. Alternatively, it can be placed on its side feet for tonal variation or mounted on a speaker stand for maximum projection. Whatever the acoustic application the A-DUO is a true performer">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/ampli/3.png" alt="Image 3" class="img-thumbnail" data-id="amp3">
+                </div>
+                <div class="name">Laney Acoustic 120 watts Combo – A-Duo</div>
+              </div>
+              <div class="items">
+                <div class="img img4 gallery-item" data-id="4" data-description="PRO SPEC PERFORMANCE
+The A-Solo is a professional, compact and portable acoustic guitar amplifier, dedicated to delivering a clean and clear amplified acoustic guitar tone wherever you need it. Whether in the Studio or live on stage the A-SOLO delivers every time. The A-SOLO has two completely independent channel strips. Flexible enough to allow for connection of either a mic and an instrument, two different acoustic instruments or even a blend of separate mic and pickup connections from the same instrument. Equally, at home or on the biggest stages in the world the A-SOLO can be your main sound source on an, intimate stage or your personal monitor on bigger stages. The A-Solo is loaded with big stage pro spec features such as feedback elimination and a pro spec DI out.
+
+">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/ampli/4.png" alt="Image 4" class="img-thumbnail" data-id="amp4">
+                </div>
+                <div class="name">Laney Acoustic 60 Watts Combo – A-Solo</div>
+              </div>
+              <div class="items">
+                <div class="img img5 gallery-item" data-id="5" data-description="PLUG, PRACTICE & PLAY
+The LA10 acoustic amplifiers delivers a natural acoustic sound to complement your acoustic instrument. LA10’s instrument channel features a 2 band EQ for tone shaping plus a Shape switch – this provides a great sounding “go to” setting from a single button press. The mini-jack AUX input allows for connection of a playback device such as MP3/iPod/CD for jamming along to songs or backing tracks, plus there is a headphone socket – a great feature for private practice or silent late-night sessions.
+
+#LASERIES #LA10
+
+DETAILS
+A shape switch applies a pre-determined EQ curve to the input signal. Applying a Mid cut, Bass & Treble boost pre the EQ tone stack of the amplifier.
+
+This socket allows you connect an external sound source of your choice and can be used for playing backing tracks into your unit. Please not the volume of music/backing track is controlled by the volume on the external sound source itself.
+
+KEY FEATURES
+Single Channel
+10 Watts RMS
+1 x 5” Custom Driver
+Mp3/Aux in
+Great for home use
+Designed specifically for acoustic instruments
+Headphone socket">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/ampli/5.png" alt="Image 5" class="img-thumbnail" data-id="amp5">
+                </div>
+                <div class="name">Laney Acoustic Combo 10 watts – LA10</div>
+              </div>
+              <div class="items">
+                <div class="img img6 gallery-item" data-id="6" data-description="PLUG, PRACTICE & PLAY
+The LA15 is a simple-to-use and compact amplifier combo designed specifically for acoustic instruments such as electro-acoustic guitars. It delivers pure acoustic tone with ease. LA15’s instrument channel features a 3 band EQ for tone shaping plus a Shape switch – this provides a great sounding “go to” setting from a single button press. A pre-selected chorus setting can be added with a simple switch. The mini-jack AUX input allows for connection of a playback device such as MP3/iPod/CD for jamming along to songs or backing tracks, plus there is a headphone socket – a great feature for private practice or silent late-night sessions.
+
+#LASERIES #LA15C
+
+DETAILS
+This socket allows you connect an external sound source of your choice and can be used for playing backing tracks into your unit. Please not the volume of music/backing track is controlled by the volume on the external sound source itself.
+
+A shape switch applies a pre-determined EQ curve to the input signal. Applying a Mid cut, Bass & Treble boost pre the EQ tone stack of the amplifier.
+
+KEY FEATURES
+Single Channel
+15 Watts RMS
+2 x 5” Custom Driver
+Headphone socket
+Mp3/Aux in
+Great for home use
+Designed specifically for acoustic instruments">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/ampli/6.png" alt="Image 6" class="img-thumbnail" data-id="amp6">
+                </div>
+                <div class="name">Laney Acoustic Combo 15 watts – LA15C</div>
+              </div>
+              <div class="items">
+                <div class="img img7 gallery-item" data-id="7" data-description="PLUG, PRACTICE & PLAY
+The LA30D is compact yet packed for performance. Two independent input channels both offer the choice of balanced XLR or unbalanced jack inputs and both can have Reverb assigned to them as required. This flexibility allows for connection of a mic and instrument, two different acoustic instruments or even a blend of separate mic and pickup connections from the same instrument. The LA30D delivers full, natural acoustic sound-reproduction with plenty of high-end sparkle.
+
+#LASERIES #LA30D
+
+DETAILS
+Anti-Feedback control can be engaged and adjusted to eliminate the body resonance feedback often associated with amplified acoustic guitars at high volume levels. To eliminate body resonance feedback, switch the filter in and adjust the anti-feedback control until the body resonation reduces. You should find a “sweet spot on” the control where any feedback present disappears.
+
+KEY FEATURES
+Dual Channel
+30 watts RMS
+2 x 6” full range drivers
+Headphone socket
+MP3/Aux in
+Instrument & Mic Channels
+Designed specifically for acoustic instruments
+Shape Switch
+Phantom power on XLR inputs
+XLR/Jack combi inputs
+Phase Switch
+Chorus
+Digital Reverb">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/ampli/7.png" alt="Image 7" class="img-thumbnail" data-id="amp7">
+                </div>
+                <div class="name">Laney Acoustic Combo 30 watts – LA30D</div>
+              </div>
+              <div class="items">
+                <div class="img img8 gallery-item" data-id="8" data-description="PRACTICE OR PERFORM ANY STYLE, ANYWHERE
+Styled after the iconic Laney NEXUS range, the New Laney MINI-BASS-NX is a battery powered bass amp, perfect for desktop, backstage or practice. A super compact solution for bass tone and performance anywhere. The MINI-BASS-NX model features a single channel, gain, shape, level, tone, TILT and volume dial, bass input, Aux in, headphone socket and the unique Laney LSI – Laney Smartphone Insert. The LSI allows you to connect your amp to your favourite bass tone generating app to access all your favourite bass tones.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/ampli/8.png" alt="Image 8" class="img-thumbnail" data-id="amp8">
+                </div>
+                <div class="name"> Laney Bass Battery Powered Amp – MINI-BASS-NX</div>
+              </div>
+              <div class="items">
+                <div class="img img9 gallery-item" data-id="9" data-description="PLUG AND PLAY
+The LX15B is a compact, plug and play practice amplifier designed specifically for bass guitar finished in a black tolex. The LX15B is a simple-to-use and compact amplifier combo designed specifically for bass guitar. It delivers deep bass tone with ease and is ideal for practice, teaching and rehearsal. The LX15B channel features a 3 band EQ for tone shaping plus an onboard compressor and a Shape switch – this provides a great sounding “go to” setting from a single button press. The mini-jack AUX input allows for connection of a playback device such as MP3/iPod/CD for jamming along to songs or backing tracks, plus there is a headphone socket – a great feature for private practice or silent late-night sessions.
+
+KEY FEATURES
+Single Channel
+2 x 5” Custom Driver
+15 Watts RMS
+Headphone socket
+MP3/Aux in
+Dedicated to bass
+On-board Compressor">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/ampli/9.png" alt="Image 9" class="img-thumbnail" data-id="amp9">
+                </div>
+                <div class="name">Laney Bass Combo 15 watts LX15B – BLK</div>
+        </section>
+        <section id="Pedal">
+          <h2>PEDAL</h2>
+          <div id="products" class="products">
+            <div class="container">
+              <div class="items">
+                <div class="img img1 gallery-item" data-id="1" data-description="Features:
+
+Parameters: Size, EQ and Mix
+Switch between plate and hall reverb
+Powered using a standard 9V power adapter (Sold Separately)
+Upgrade firmware and sound algorithms via the Aalberg Update app (Coming Soon)
+Compatible with the Aero AE-1 Wireless Controller (Sold Separately)
+ 
+
+Specifications:
+
+Input: 1MΩ
+Output: 1kΩ
+Connectors: IN, OUT (Mono/Stereo)
+Power Supply: 9V DC 250mA
+Dimensions: 55.4mm x 141mm x 89.3mm (H x L x W)
+Weight: 533g">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/pedals/p1.png" alt="Image 1" class="img-thumbnail" data-id="p1">
+                </div>
+                <div class="name">Aalberg Audio ROM RO-1 Reverb</div>
+              </div>
+              <div class="items">
+                <div class="img img2 gallery-item" data-id="2" data-description="Plug and play silicon fuzz operated by BC108, the same transistors used in the late 60’s Fuzz Face.
+
+Its sound is fat and massive but also surprisingly accurate in high frequencies to let it cut through any mix.
+
+The Feed Me comes stock with our favorite settings but don’t let it fool you with its apparent simplicity, the internal settings allow you to refine your tone.
+
+ 
+
+Get your tone by the inside
+
+
+treble
+
+You get the natural sound of the effect when it is at 0. The more you turn it, the more you cut the trebles.
+level
+
+15dB at the output.
+fuzz
+
+Controls the craziness of the effect
+light
+
+Controls light intensity
+feed
+
+Adjust the amount of the attack entering the system. a lot of feed means an infinite sustain.
+bias
+
+Set if you want the creamy and massive feed me or an insane and explosive germanium fuzz sound.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/pedals/p2.png" alt="Image 2" class="img-thumbnail" data-id="p2">
+                </div>
+                <div class="name">Anasounds Feed Me BC-108 Silicon Fuzz</div>
+              </div>
+              <div class="items">
+                <div class="img img3 gallery-item" data-id="3" data-description="overdrive and boost
+Amplifier a little bit too weak? Overdrive you want to push? A good way to stand out in the mix while doing an amazing solo? Line losses?
+
+The Freq Up is the pedal you need, in front of your pedalboard or amplifier!
+
+This is a boost where you find both a transparent, clean boost and a really strong crunch.
+
+Additionally,  you have the option to stay in the middle mode or to select the frequencies, bass or treble, you want to add.
+
+An internal setting allows you to change the nature of the overdrive, tight and modern or warm and vintage.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/pedals/p3.png" alt="Image 3" class="img-thumbnail" data-id="p3">
+                </div>
+                <div class="name">Anasounds Freq Up Custom Boost</div>
+              </div>
+              <div class="items">
+                <div class="img img4 gallery-item" data-id="4" data-description="Anasounds Phase Lag is an OTA-based 100% analog phase modulation pedal. OTA allows you to create more accurate and higher quality tones than many FET-based circuits, such as the famous orange model.
+Which one is better is a difficult question, but Anasounds actually made a number of FET-based phase shifters, and after a comparative study, chose OTA.
+
+Phase Lag allows you to create modern modulations that sweep across the frequency band you play. A low RATE gives a spatial expanse, and a high RATE gives a vibrato tone. Phase Lag is a 4-stage phase shifter, a pedal that has been tested many times. We paid particular attention to the volume, and designed it so that the volume would not drop too much by passing through the effect. The Anasounds logo indicator flashes in time with the RATE setting to instantly see your current setting. In addition, eight DIP switches can be installed inside to create vibe, vibrato, and tremolo effects from the phase shifter.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/pedals/p4.png" alt="Image 4" class="img-thumbnail" data-id="p4">
+                </div>
+                <div class="name">Anasounds Phase Lag Phase Modulation</div>
+              </div>
+              <div class="items">
+                <div class="img img5 gallery-item" data-id="5" data-description="The Black Arts Toneworks Revelation is a bold, loud boost and overdrive pedal designed to multiply and magnify the overall sound of your amp. A pre-gain control sets the gain range, the gain control sets the amount of overdrive, and the volume knob gives you almost unnecessary amounts of juice to feed your amp. In addition to the standard version of the Revelation, the SuperLead version brings a more aggressive, snotty sound to the table while the SuperBass is a little rounder and more dynamic with a big, booming bottom end.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/pedals/p5.png" alt="Image 5" class="img-thumbnail" data-id="p5">
+                </div>
+                <div class="name">Black Arts Revelation Superbass Overdrive</div>
+              </div>
+              <div class="items">
+                <div class="img img6 gallery-item" data-id="6" data-description="Bogner’s Ecstasy amp blue channel in a pedal
+Discreet Class A gain stages, not op-amps and diodes like other pedals
+Mode Switch selects Plexi or Blue gain levels
+Variac switch adds a “dropped voltage” dynamic compression to the feel and sound
+Boost function with independent volume and gain
+Pre-EQ Switch controls “openness” and presence of higher range harmonics
+Structure switch offers EQs and gain structures from various Ecstasy amplifier models">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/pedals/p6.jpg" alt="Image 6" class="img-thumbnail" data-id="p6">
+                </div>
+                <div class="name">Bogner Ecstasy Blue Overdrive</div>
+              </div>
+              <div class="items">
+                <div class="img img7 gallery-item" data-id="7" data-description="The Bogner Harlow is a unique boost pedal with a “Bloom” compression feature, which serves up dynamic three-dimensional punch and tastefully transparent squeeze. The 100% analog circuit delivers a wide range of boost – from crystal-clear light boost to a thick and meaty high-output assault on your amp’s input section – you’ll never want to turn it off. At the heart of the Harlow is a custom audio transformer created by legendary audio pioneer Mr. Rupert Neve.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/pedals/p7.png" alt="Image 7" class="img-thumbnail" data-id="p7">
+                </div>
+                <div class="name">Bogner Harlow v2 Boost</div>
+              </div>
+              <div class="items">
+                <div class="img img8 gallery-item" data-id="8" data-description="The use of a Rupert Neve Designs audio transformer already transported Bogner’s successful overdrive, distortion, and booster pedals into the realm of ‘magical’, so it only made sense to apply the transformer’s unique feel and harmonic richness into a fuzz. Enter the Oxford. The Oxford fuzz’s incredibly wide range of gain delivers access to touch-sensitive overdrive, classic ’60s-style fuzz, and over-the-top sonic mayhem. And there is plenty of control onboard for precisely dialing in your ideal shade of dirt. If you’re looking for a versatile fuzz with a ton of gain, the Bogner Oxford Fuzz is it.
+
+ ">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/pedals/p8.png" alt="Image 8" class="img-thumbnail" data-id="p8">
+                </div>
+                <div class="name">Bogner Oxford Fuzz</div>
+              </div>
+              <div class="items">
+                <div class="img img9 gallery-item" data-id="9" data-description="The Bogner Wessex has also received an update: the Wessex V2 delivers a multitude of dynamic overdrive sounds – from light distortion to full crunch. A high-end audio transmitter is also responsible for the open, round sound in the signal path. With the enhanced switch, the obligatory “extra shovelof coal” can be added – powerful bass and silvery highs. The whole thing is housed in a pedal board-friendly Stnadard housing.
+
+ 
+
+Special Features: Custom Audio Transformer in Signal path
+Mono / Stereo: Mono In, Mono Out
+Controls: Level, Gain, Treble, Bass
+Modes: 2 Modes
+Switches: Normal/Enhanced
+Bypass Mode: True bypass
+Power supply: 9 VDC, Center negative
+Power Consumption: n. a.
+Battery powered: Does not run on Battery power
+Boutique Effect: yes
+Country of Origin: USA">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/pedals/p9.jpg" alt="Image 9" class="img-thumbnail" data-id="p9">
+                </div>
+                <div class="name"> Bogner Wessex V2 Overdrive</div>
+        </section>
+        <section id="Accessories">
+          <h2>ACCESSORIES</h2>
+          <div id="products" class="products">
+            <div class="container">
+              <div class="items">
+                <div class="img img1 gallery-item" data-id="1" data-description="The ’59 neck model is one of our most popular pickups because it’s so versatile. Like its bridge-position sibling, the ’59 neck is designed in the spirit of the original P.A.F. humbuckers of the 1950s, with sweet sustain, and a warm, full sound that still possesses a clear attack. We’ve made a few refinements to slightly modernize the design and make it more adaptable to different styles. The high end is slightly boosted for improved pick-attack clarity and the mids are a little scooped for an open, smooth sound that’s great for preserving the clarity of the individual notes in a chord. The ’59 neck was born to accompany the ’59 bridge, but countless players pair it with a high output bridge humbucker, such as a JB or Custom. It’s also a popular choice for humbucker-routed Telecasters.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acces/ac1.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name">59 Model Neck – Nickel</div>
+              </div>
+              <div class="items">
+                <div class="img img2 gallery-item" data-id="2" data-description="The ’59 neck model (SH-1n) is one of our most popular pickups because it’s so versatile. Like its bridge-position sibling, the ’59 neck is designed in the spirit of the original P.A.F. humbuckers of the 1950s, with sweet sustain, and a warm, full sound that still possesses a clear attack. We’ve made a few refinements to slightly modernize the design and make it more adaptable to different styles. The high end is slightly boosted for improved pick-attack clarity and the mids are a little scooped for an open, smooth sound that’s great for preserving the clarity of the individual notes in a chord. The ’59 neck was born to accompany the ’59 bridge, but countless players pair it with a high output bridge humbucker, such as a JB or Custom. It’s also a popular choice for humbucker-routed Telecasters.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acces/ac2.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name">59 Model Neck – Raw Nickel Tortoiseshell Cover</div>
+              </div>
+              <div class="items">
+                <div class="img img3 gallery-item" data-id="3" data-description="In the late 70s, Seymour Duncan was well known as the go-to guy for the tone-chasers that needed something custom. Sometime in ‘78 he was given a P.A.F. with the instructions to rewind it and make it more sensitive to natural and artificial harmonics. In other words, give it the Duncan “hot wind” with a little extra.
+
+ 
+
+The Seymour Duncan ‘78 is loaded with an Alnico 2 magnet, wound to the exact same hot specs as that original P.A.F. rewind. The magnet and output combination lend themselves to a warm crunch with biting leads and overtone laden tapped runs.
+
+ 
+
+If you’re a tone-chasing player who wants the classic hard rockin’ rhythm crunch, articulate picked harmonics for your tapped solos and whammy bar acrobatics, the ’78 Model is what you need.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acces/ac3.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name"> 78 Model Bridge – Black</div>
+              </div>
+              <div class="items">
+                <div class="img img4 gallery-item" data-id="4" data-description="In the late 70s, Seymour Duncan was well known as the go-to guy for the tone-chasers that needed something custom. Sometime in ‘78 he was given a P.A.F. with the instructions to rewind it and make it more sensitive to natural and artificial harmonics. In other words, give it the Duncan “hot wind” with a little extra.
+
+ 
+
+The Seymour Duncan ‘78 is loaded with an Alnico 2 magnet, wound to the exact same hot specs as that original P.A.F. rewind. The magnet and output combination lend themselves to a warm crunch with biting leads and overtone laden tapped runs.
+
+ 
+
+If you’re a tone-chasing player who wants the classic hard rockin’ rhythm crunch, articulate picked harmonics for your tapped solos and whammy bar acrobatics, the ’78 Model is what you need.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acces/ac4.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name">78 Model Bridge – Reverse Zebra</div>
+              </div>
+              <div class="items">
+                <div class="img img5 gallery-item" data-id="5" data-description="In the late 70s, Seymour Duncan was well known as the go-to guy for the tone-chasers that needed something custom. Sometime in ‘78 he was given a P.A.F. with the instructions to rewind it and make it more sensitive to natural and artificial harmonics. In other words, give it the Duncan “hot wind” with a little extra.
+
+ 
+
+The Seymour Duncan ‘78 is loaded with an Alnico 2 magnet, wound to the exact same hot specs as that original P.A.F. rewind. The magnet and output combination lend themselves to a warm crunch with biting leads and overtone laden tapped runs.
+
+ 
+
+If you’re a tone-chasing player who wants the classic hard rockin’ rhythm crunch, articulate picked harmonics for your tapped solos and whammy bar acrobatics, the ’78 Model is what you need.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acces/ac5.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name">78 Model Neck – Black</div>
+              </div>
+              <div class="items">
+                <div class="img img6 gallery-item" data-id="6" data-description="In the late 70s, Seymour Duncan was well known as the go-to guy for the tone-chasers that needed something custom. Sometime in ‘78 he was given a P.A.F. with the instructions to rewind it and make it more sensitive to natural and artificial harmonics. In other words, give it the Duncan “hot wind” with a little extra.
+
+ 
+
+The Seymour Duncan ‘78 is loaded with an Alnico 2 magnet, wound to the exact same hot specs as that original P.A.F. rewind. The magnet and output combination lend themselves to a warm crunch with biting leads and overtone laden tapped runs.
+
+ 
+
+If you’re a tone-chasing player who wants the classic hard rockin’ rhythm crunch, articulate picked harmonics for your tapped solos and whammy bar acrobatics, the ’78 Model is what you need.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acces/ac6.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name">78 Model Neck – Reverse Zebra</div>
+              </div>
+              <div class="items">
+                <div class="img img7 gallery-item" data-id="7" data-description="In the late 70s, Seymour Duncan was well known as the go-to guy for the tone-chasers that needed something custom. Sometime in ‘78 he was given a P.A.F. with the instructions to rewind it and make it more sensitive to natural and artificial harmonics. In other words, give it the Duncan “hot wind” with a little extra.
+
+The Seymour Duncan ‘78 is loaded with an Alnico 2 magnet, wound to the exact same hot specs as that original P.A.F. rewind. The magnet and output combination lend themselves to a warm crunch with biting leads and overtone laden tapped runs.
+
+If you’re a tone-chasing player who wants the classic hard rockin’ rhythm crunch, articulate picked harmonics for your tapped solos and whammy bar acrobatics, the ’78 Model is what you need.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acces/ac7.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name">78 Model Set – Nickel Cover</div>
+              </div>
+              <div class="items">
+                <div class="img img8 gallery-item" data-id="8" data-description="3D-printed In-ear Monitors
+
+Unique blend of 4 balanced armatures and 2 electrostatic tweeters in luscious harmony.
+
+Meticulously Handcrafted
+ADV. M5-6D in-ear monitors are expertly handcrafted using only the bespoke and highest grade components. Each unit goes through a specific set of procedure that includes 3D printing, hand-poured mould, grinding, laser-cutting, sanding and polishing. This meticulous production procedure requires 4-6 weeks of lead-time from preparation of the material to the final assembly. Once assembled, every M5-6D goes through a rigorous quality control process by the master technician, before finally getting approved and packaged.
+
+Proprietary Hybrid Driver Technology
+The M5-6D utilizes a proprietary-tuned blend of balanced armature drivers and the latest electrostatic tweeters to express audio in an unconventional fashion. One deciding characteristic of M5-6D is its incredible bass response with a set of dedicated woofers which is intimate and powerful – ideal for rock, pop and live music to accentuate the realistic and raw soundstage. The electrostatic tweeters bring out the micro-detail so you never miss the treble nuance under the bass. The resulting audio is powerful, sibilance-free and intimate listening experience that is completely unique and distinctive.
+
+Designed to Fit You
+The M5-6D is crafted with medical-grade acrylic, which is one of the safest material to use for a wearable device that comes in contact with your skin. Universal version of M5-6D is ergonomically designed after studying the shape of thousands of custom in-ear monitors. We’ve taken a common denominator from all the different ear shape, and morphed them into the universal shape it is now. Furthermore, the M5-6D is also offered in custom-fit, crafted to fit only your ear, should you decide to send us your ear impression.
+
+Interchangeable 2-pin Silver-Plated Copper Cable
+Included premium quad-braided silver-plated copper cable with a 3.5mm gold-plated plug uses 2-pin (0.78mm) termination that allows the cable and the monitors to be easily detachable.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acces/ac8.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name">ADV M5-6D Universal</div>
+              </div>
+              <div class="items">
+                <div class="img img9 gallery-item" data-id="9" data-description="The Pinnacle of True Wireless Audio
+The proprietary PHPC (Pressurized High-Purity Carbon) driver used in the M5-TWS consists of the ultra-thin pressurized diamond-like carbon layer diaphragm which is both extremely rigid and light-weight, combined with the high-mass pure copper moving coil that maximizes the vibration stroke of the diaphragm. This unique pairing results in an improved overall resolution of the audio output from its 6.1mm diameter driver. M5-TWS is then delicately tuned to resemble Harman target curve using our proprietary acoustic filters and precise driver placement relative to your eardrum. Resulting audio is high-fidelity unlike any true wireless earbuds that came before it.
+
+World’s First 3D-printed Housing
+The M5-TWS is the world’s first true wireless earbuds that are crafted using the latest 3D-printing technology. Its totally ergonomic housing is designed based on 50,000+ actual ear impression data our partners and we collected over the years to ensure maximum compatibility and comfort. Its complex contours that resemble the actual in-ear shape could only be achieved by implementing the 3D-printing technique over the traditional mould tooling method.
+
+CNC Aluminum Premium Charging Case
+The M5-TWS features a premium CNC-machined and anodized aluminum charging case with USB-C charging port. The case has a easy-slide lid that is designed for one-hand operation, which allows a quick access to the earbuds on-the-go.
+
+Automatic Pairing, Intuitive Touch-Control
+The M5-TWS automatically turns on, enters pairing mode and turns off when you are done using it. Touch gesture control allows seamless operation of M5-TWS and provide fluid and unobstructed user-experience.
+
+All Day Battery Life
+The M5-TWS can play music up to 32-hour of all day use with its charging case. Single charge of earbuds is good for 9-hour continuous music playing. Combined with quick-charging, the M5-TWS is your ideal all-day portable music companion.
+
+APTX / AAC High Resolution Codec Support
+The M5-TWS implements the latest Qualcomm QCC3020 chipset, enabling APTX / AAC codec for high resolution music playback, and streamlining the pairing protocol that eliminates the need to reset the device for connection issues.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acces/ac9.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name">ADV M5-TWS 3D-printed True Wireless Earbuds – Red</div>
+              </div>
+              <div class="items">
+                <div class="img img10 gallery-item" data-id="10" data-description="Alnico 2 Pro humbucker pickups will instantly turn your guitar into a true bluesbreaker. The Alnico 2 Pro Humbucker neck uses the soft treble attack and low string pull of an alnico 2 bar magnet, combined with a special vintage output coil wind to create a warm, sweet tone that is smooth and full, with tons of natural sustain. The highs sound thick and really sing, while the lows are warm and buttery, giving you a pickup that is very sensitive to pick attack.
+
+The Alnico 2 Pro bridge humbucker’s highs are articulate and smooth, and the lows are warm and spongy. Combined with a high gain tube amp, the overdriven tone is expressive and soulful. For over 25 years Slash has been the champion of this pickup and used them exclusively on Appetite for Destruction, which has gone on to become the biggest selling debut album of all time.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/acces/ac10.png" alt="Image 1" class="img-thumbnail" data-id="amp1">
+                </div>
+                <div class="name">Alnico II Pro Neck – Nickel</div>
+        </section>
+        <section id="Parts">
+          <h2>PARTS</h2>
+          <div id="products" class="products">
+            <div class="container">
+              <div class="items">
+                <div class="img img1 gallery-item" data-id="1" data-description="250K ohm audio pot, 3/4″ long threaded bushing, CTS, split shaft, with hardware.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/parts/pa1.png" alt="Image 1" class="img-thumbnail" data-id="pa1">
+                </div>
+                <div class="name">All Parts CTS 250K Long Thread</div>
+              </div>
+              <div class="items">
+                <div class="img img2 gallery-item" data-id="2" data-description="Pack of 6 Gold Tremolo Mounting Screws">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/parts/pa2.png" alt="Image 2" class="img-thumbnail" data-id="pa2">
+                </div>
+                <div class="name">All Parts Tremolo Mounting Screws – Gold</div>
+              </div>
+              <div class="items">
+                <div class="img img3 gallery-item" data-id="3" data-description="Mohawk Pointer
+Glowing Eyes
+Quick Install
+Brilliant Chrome Finish
+Dense Construction
+Nylon Insert">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/parts/pa3.png" alt="Image 3" class="img-thumbnail" data-id="pa3">
+                </div>
+                <div class="name">B.C.Rich Skreeming Skulls Replacement Knobs</div>
+              </div>
+              <div class="items">
+                <div class="img img4 gallery-item" data-id="4" data-description="These premium, American-made switches are the original parts selected by Leo Fender for the first Telecaster® and Stratocaster® guitars in the 1950’s.
+
+Whether you’re replacing a defective switch, building a new instrument, or just in the market for an upgrade, DiMarzio’s CRL switches are an improvement that you will both hear and feel.
+
+Black and white switch tips are included, along with two nickel-plated Phillips-head mounting screws.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/parts/pa4.png" alt="Image 4" class="img-thumbnail" data-id="pa4">
+                </div>
+                <div class="name">DIMARZIO 3-way Lever Switch</div>
+              </div>
+              <div class="items">
+                <div class="img img5 gallery-item" data-id="5" data-description="The easiest way to explain a three-position, four pole double throw switch is to say that it is essentially two double throw double pole switches in one housing. With just this one powerful switch, any number of switching options can be achieved — from simple pickup selection to phase reversal, coil splitting, and pickup selection or blower switch options (routing around a volume or tone pot and direct to the output jack)
+
+ 
+
+Shaft diameter is standard 3/8”, so it can directly retrofit most standard USA Fender® and Gibson® volume and tone pot holes. The threaded shaft is 15/32” (11.906 mm) in height. Two nuts, a finish washer, and a sawtooth lock washer are included for easy installation.">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/parts/pa5.png" alt="Image 5" class="img-thumbnail" data-id="pa5">
+                </div>
+                <div class="name"> Dimarzio 4PDT Selector Switch – 3 Position</div>
+              </div>
+              <div class="items">
+                <div class="img img6 gallery-item" data-id="6" data-description="Made in USA">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/parts/pa6.png" alt="Image 6" class="img-thumbnail" data-id="pa6">
+                </div>
+                <div class="name">Dimarzio 560 Picofarad Capacitor</div>
+              </div>
+              <div class="items">
+                <div class="img img7 gallery-item" data-id="7" data-description="Gibson Style Metal Jack Plate Chrome
+“Whether you’re a do-it-yourselfer with a project guitar or you just want a new look for your axe, DiMarzio makes this Gibson Style Metal Jack Plate available to you
+DiMarzio includes mounting screws and ring">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/parts/pa7.png" alt="Image 7" class="img-thumbnail" data-id="pa7">
+                </div>
+                <div class="name"> DiMarzio Gibson Style Metal Jack Plate – Chrome</div>
+              </div>
+              <div class="items">
+                <div class="img img8 gallery-item" data-id="8" data-description="Set of 8
+Designed for use with the Fender Precision Bass
+MADE IN THE USA">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/parts/pa8.png" alt="Image 8" class="img-thumbnail" data-id="pa8">
+                </div>
+                <div class="name">Dimarzio P-Bass Pickup Height Adjustment Screws</div>
+              </div>
+              <div class="items">
+                <div class="img img1 gallery-item" data-id="9" data-description="DiMarzio CHROME screws for guitar pickguards, backplates and truss rod covers. These suit Fender style guitars. Made in U.S.A.
+
+Set of 24">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/parts/pa9.png" alt="Image 9" class="img-thumbnail" data-id="pa9">
+                </div>
+                <div class="name">Dimarzio Pickguard and Backplate Screws – Chrome</div>
+              </div>
+              <div class="items">
+                <div class="img img10 gallery-item" data-id="10" data-description="DiMarzio GOLD screws for guitar pickguards, backplates and truss rod covers. These suit Fender style guitars. Made in U.S.A.
+
+Set of 24">
+                  <img src="https://raw.githubusercontent.com/iycaa/images/main/GUITAR/parts/pa10.png" alt="Image 10" class="img-thumbnail" data-id="pa10">
+                </div>
+                <div class="name"> Dimarzio Pickguard and Backplate Screws – Gold</div>
+        </section>
+        <section class="contact">
+          <div class="others">
+            <h2>Contact</h2>
+            <span>Address : 3 Coleman Street B1-40/41 Peninsula Shopping <br> Complex Singapore 17980 </span>
+            <br><span>Phone : +65 6337 5092</span><br><span>Opens : Mon - Sat : 10:30am - 7.30pm <br> Sun & Public Holidays 1:00pm - 6:00pm</span>
+        </section>
+		
+		<footer>
+      
+      <button id="topbtn" class="btntop" style="color: rgb(200, 150, 48); opacity: 0; visibility: hidden;"></button>
+    </footer>
+	<script>
+      window.addEventListener('scroll', () => {
+        const footer = document.querySelector('footer');
+        const topbtn = document.getElementById("topbtn");
+
+        if (window.scrollY > 50 || document.documentElement.scrollTop > 50) {
+          footer.style.display = "block";
+          topbtn.style.opacity = "1";
+          topbtn.style.visibility = "visible";
+        } else {
+          footer.style.display = "none";
+          topbtn.style.opacity = "0";
+          topbtn.style.visibility = "hidden";
+        }
+      });
+
+      const topbtn = document.getElementById("topbtn");
+      topbtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    </script>
+		<script src="script.js"></script>
